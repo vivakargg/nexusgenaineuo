@@ -16,15 +16,23 @@ import { fileURLToPath } from 'url';
 import { handler } from './server/index.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const app = express();
 
-// Serve static files from the client build
-app.use(express.static(path.join(__dirname, 'client')));
+// Create an async bootstrap function
+async function bootstrap() {
+  const app = express();
+  
+  // Serve static files from the client build
+  app.use(express.static(path.join(__dirname, 'client')));
+  
+  // Wait for the handler to be ready and use it
+  const handlerApp = await handler;
+  app.use(handlerApp);
+  
+  return app;
+}
 
-// Use the main application handler
-app.use(handler);
-
-export default app;
+// Export the bootstrap function
+export default bootstrap();
 `;
 
   await fs.writeFile(path.join(process.cwd(), 'dist', 'index.js'), serverContent);
