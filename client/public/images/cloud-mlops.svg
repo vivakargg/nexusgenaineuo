@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M16 36C16 29.3726 21.3726 24 28 24C34.6274 24 40 29.3726 40 36C46.6274 36 52 41.3726 52 48C52 54.6274 46.6274 60 40 60H24C17.3726 60 12 54.6274 12 48C12 41.3726 17.3726 36 24 36" stroke="white" stroke-width="2"/>
+  <path d="M28 16L28 40" stroke="white" stroke-width="2"/>
+  <path d="M22 22L28 16L34 22" stroke="white" stroke-width="2"/>
+</svg>
