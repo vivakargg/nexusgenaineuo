@@ -8,31 +8,12 @@ async function prepareForVercel() {
   // Ensure server files are in the correct location
   await fs.cp(serverDir, path.join(process.cwd(), 'dist'), { recursive: true });
   
-  // Create a simple server file that serves the static files
+  // Create the Vercel entry point
   const serverContent = `
-import express from 'express';
-import path from 'path';
-import { fileURLToPath } from 'url';
-import { handler } from './server/index.js';
+import app from './server/index.js';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-
-// Create an async bootstrap function
-async function bootstrap() {
-  const app = express();
-  
-  // Serve static files from the client build
-  app.use(express.static(path.join(__dirname, 'client')));
-  
-  // Wait for the handler to be ready and use it
-  const handlerApp = await handler;
-  app.use(handlerApp);
-  
-  return app;
-}
-
-// Export the bootstrap function
-export default bootstrap();
+// Export the Express app
+export default app;
 `;
 
   await fs.writeFile(path.join(process.cwd(), 'dist', 'index.js'), serverContent);
