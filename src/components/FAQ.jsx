@@ -108,8 +108,8 @@ const FAQ = () => {
                   vivakar@nextgenainova.com
                 </a>
                 <span className="text-muted-foreground hidden sm:inline">|</span>
-                <a href="tel:+15551234567" className="text-primary hover:underline">
-                  +1 (555) 123-4567 (Example)
+                <a href="tel:+91-9160484986" className="text-primary hover:underline">
+                  +91-9160484986
                 </a>
               </div>
             </div>
