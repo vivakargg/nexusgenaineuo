@@ -23,7 +23,7 @@ function App() {
   });
 
   useEffect(() => {
-    document.title = "NextGenAINova | AI Solutions, 3D Models, Education & Platforms";
+    document.title = "NextGenAINova | Intelligent AI Solutions & Business Automation";
   }, []);
 
   return (

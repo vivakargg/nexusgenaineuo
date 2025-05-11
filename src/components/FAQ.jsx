@@ -10,28 +10,32 @@ import {
 
 const faqItems = [
   {
-    question: "What makes NextGenAINova different from other AI platforms?",
-    answer: "NextGenAINova combines cutting-edge AI technology with a specialized Node.js development environment. Unlike general-purpose AI tools, our platform is specifically designed for developers, with features like context-aware code completion, automated refactoring, and seamless deployment options. Our AI models are trained on vast repositories of high-quality code to provide the most relevant and accurate suggestions."
+    question: "What data is NextGenAINova's AI trained on?",
+    answer: "Our AI models are trained on a diverse and extensive range of datasets, carefully curated for relevance and quality. This includes vast repositories of publicly available information, specialized industry-specific data, and, where applicable and with explicit consent, anonymized data from user interactions to improve specific functionalities. For personal AI assistants dealing with sensitive fields like law or medicine, training involves rigorously vetted professional literature, case studies, and regularly updated official guidelines to ensure accuracy and reliability."
   },
   {
-    question: "Do I need to be an AI expert to use the platform?",
-    answer: "Not at all! NextGenAINova is designed to be intuitive and accessible for developers of all skill levels. The AI features work seamlessly in the background, providing suggestions and optimizations without requiring any AI expertise. You can focus on writing code while our AI handles the complex tasks of understanding context, suggesting improvements, and optimizing performance."
+    question: "What is the accuracy of your AI models?",
+    answer: "Accuracy is a key focus at NextGenAINova. Our models achieve high levels of accuracy, which varies depending on the specific task and the complexity of the data. For instance, our conversational AI for customer support typically resolves over 80% of common queries accurately on the first interaction. For more specialized tasks like legal or medical information retrieval, we aim for precision and recall rates exceeding 90-95% on validated test sets. We continuously monitor and refine our models to maintain and improve these accuracy benchmarks, incorporating user feedback and new data."
   },
   {
-    question: "Can I integrate NextGenAINova with my existing tools and workflows?",
-    answer: "Absolutely! NextGenAINova is built with integration in mind. We support seamless connections with popular version control systems like GitHub and GitLab, CI/CD pipelines, project management tools, and more. Our platform also offers APIs that allow you to extend functionality and connect with custom tools in your workflow."
+    question: "How do multi-conversational bots engage website visitors?",
+    answer: "Our multi-conversational bots are designed to provide a natural and engaging experience. They can understand context over multiple turns of conversation, ask clarifying questions, and personalize interactions based on visitor behavior. They can proactively offer assistance, guide users to relevant information, qualify leads, and even complete simple transactions, all while maintaining a human-like conversational flow."
   },
   {
-    question: "How secure is my code on the NextGenAINova platform?",
-    answer: "Security is our top priority. We implement bank-level encryption for all data, both in transit and at rest. Your code is never shared with third parties, and we maintain strict access controls. Our Enterprise plan includes additional security features like private deployments, audit logs, and compliance certifications for regulated industries."
+    question: "How does AI customer support save costs?",
+    answer: "AI-powered customer support significantly reduces costs by automating responses to frequently asked questions and routine issues. This means fewer human agents are needed for tier-1 support, lowering staffing costs. Bots can operate 24/7, reducing the need for after-hours support staff. They also improve first-contact resolution rates, minimizing follow-ups and escalations, which further optimizes operational expenses."
   },
   {
-    question: "What kind of support do you offer?",
-    answer: "We offer tiered support based on your plan. All users have access to our comprehensive documentation and community forums. Professional plan users receive priority email support with faster response times. Enterprise customers benefit from 24/7 dedicated support, including phone and video assistance, as well as a dedicated account manager for personalized guidance."
+    question: "How does AI assist in lead generation?",
+    answer: "Our AI analyzes website visitor interactions in real-time to identify patterns and behaviors indicative of potential leads. It can engage visitors with targeted questions, qualify their interest and needs, collect contact information, and even schedule demos or appointments. This automated process ensures no potential lead is missed and provides your sales team with pre-qualified prospects, increasing conversion rates."
   },
   {
-    question: "Can I try NextGenAINova before committing to a subscription?",
-    answer: "Yes! We offer a 14-day free trial with full access to all features in our Professional plan. No credit card is required to start your trial. This gives you ample time to explore the platform, test the AI capabilities, and see how NextGenAINova can enhance your development workflow before making a decision."
+    question: "How do personal AI assistants handle complex, ever-updating information like laws or medical knowledge?",
+    answer: "Personal AI assistants for specialized fields are built on knowledge bases that are continuously updated with the latest information from verified sources. We employ sophisticated data ingestion and validation pipelines. The AI uses Natural Language Processing (NLP) and understanding (NLU) to interpret complex queries and retrieve the most relevant and current information, often providing sources or confidence scores for its answers."
+  },
+  {
+    question: "How does customer segmentation for SMBs work?",
+    answer: "Our AI analyzes various data points for Small to Medium Businesses (SMBs), such as their industry, size, online presence, stated needs (from interactions), and pain points. It then groups similar SMBs into distinct segments. This allows you to tailor your marketing messages, product offerings, and sales approaches more effectively to each segment, increasing relevance and engagement."
   }
 ];
 
@@ -56,7 +60,7 @@ const FAQ = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-xl text-muted-foreground max-w-2xl mx-auto"
           >
-            Find answers to common questions about NextGenAINova's platform and services.
+            Find answers to common questions about NextGenAINova's AI solutions and capabilities.
           </motion.p>
         </div>
 
@@ -71,10 +75,10 @@ const FAQ = () => {
                 transition={{ duration: 0.3, delay: index * 0.1 }}
               >
                 <AccordionItem value={`item-${index}`}>
-                  <AccordionTrigger className="text-left font-medium">
+                  <AccordionTrigger className="text-left font-medium text-lg">
                     {item.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground">
+                  <AccordionContent className="text-muted-foreground text-base pt-2 pb-4">
                     {item.answer}
                   </AccordionContent>
                 </AccordionItem>
@@ -92,20 +96,20 @@ const FAQ = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="inline-flex bg-card border border-border rounded-lg p-6"
+            className="inline-flex bg-card border border-border rounded-lg p-6 shadow-lg"
           >
             <div className="text-left">
               <h3 className="text-xl font-semibold mb-2">Contact our support team</h3>
               <p className="text-muted-foreground mb-4">
                 Our experts are available to answer any questions you might have.
               </p>
-              <div className="flex space-x-4">
-                <a href="#" className="text-primary hover:underline">
-                  support@nextgenainova.com
+              <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-2 sm:space-y-0">
+                <a href={`mailto:vivakar@nextgenainova.com?subject=Support Inquiry`} className="text-primary hover:underline">
+                  vivakar@nextgenainova.com
                 </a>
-                <span className="text-muted-foreground">|</span>
-                <a href="#" className="text-primary hover:underline">
-                  +1 (555) 123-4567
+                <span className="text-muted-foreground hidden sm:inline">|</span>
+                <a href="tel:+15551234567" className="text-primary hover:underline">
+                  +1 (555) 123-4567 (Example)
                 </a>
               </div>
             </div>

@@ -1,54 +1,66 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Cpu, Zap, Cloud, Shield, BarChart, Layers, RefreshCw, Brain, Box as Cube } from 'lucide-react';
+import { 
+  MessageSquare, 
+  Users, 
+  DollarSign, 
+  Zap, 
+  Brain, 
+  Shield, 
+  BarChart, 
+  Layers, 
+  RefreshCw,
+  UserCheck,
+  FileText
+} from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 const featureItems = [
   {
-    icon: <Cpu className="h-10 w-10 text-primary" />,
-    title: "Advanced AI Models",
-    description: "Leverage state-of-the-art AI models trained on vast datasets for intelligent insights and automation."
+    icon: <MessageSquare className="h-10 w-10 text-primary" />,
+    title: "Multi-Conversational Bots",
+    description: "Engage any customer visiting your website with intelligent, multi-turn conversational AI bots, available 24/7."
   },
   {
-    icon: <Brain className="h-10 w-10 text-primary" />,
-    title: "Intelligent Automation",
-    description: "Automate complex tasks and workflows using our powerful AI-driven automation tools."
-  },
-  {
-    icon: <Cube className="h-10 w-10 text-primary" />,
-    title: "3D Model Visualization",
-    description: "Integrate and visualize complex 3D models for enhanced data representation and interactive experiences."
+    icon: <DollarSign className="h-10 w-10 text-primary" />,
+    title: "Automated Customer Support",
+    description: "Reduce operational costs and improve customer satisfaction with AI-powered bots handling support queries efficiently."
   },
   {
     icon: <Zap className="h-10 w-10 text-primary" />,
-    title: "Rapid Processing",
-    description: "Experience high-speed data processing and analysis with our optimized AI infrastructure."
+    title: "AI-Powered Lead Generation",
+    description: "Proactively identify and qualify leads from website interactions, boosting your sales pipeline."
   },
   {
-    icon: <Cloud className="h-10 w-10 text-primary" />,
-    title: "Cloud Integration",
-    description: "Seamlessly integrate with popular cloud services and APIs for extended functionality."
+    icon: <UserCheck className="h-10 w-10 text-primary" />,
+    title: "Personal AI Assistants",
+    description: "Provide individuals with sophisticated AI assistants capable of handling complex, ever-updating information (e.g., legal, medical contexts)."
   },
   {
-    icon: <Shield className="h-10 w-10 text-primary" />,
-    title: "Enterprise Security",
-    description: "Bank-level security with encryption at rest and in transit to protect your data."
+    icon: <Users className="h-10 w-10 text-primary" />,
+    title: "SMB Customer Segmentation",
+    description: "Understand your Small to Medium Business customers better by segmenting them based on characteristics and pain points for targeted solutions."
   },
   {
-    icon: <BarChart className="h-10 w-10 text-primary" />,
-    title: "Insightful Analytics",
-    description: "Comprehensive analytics and reporting to derive actionable insights from your data."
+    icon: <Brain className="h-10 w-10 text-primary" />,
+    title: "Advanced AI Models",
+    description: "Leverage state-of-the-art AI models trained for diverse applications, ensuring high accuracy and relevance."
   },
   {
     icon: <Layers className="h-10 w-10 text-primary" />,
     title: "Customizable Solutions",
-    description: "Tailor our AI solutions to fit your specific business needs and requirements."
+    description: "Tailor our AI solutions to fit your specific business needs, workflows, and integration requirements."
+  },
+  {
+    icon: <Shield className="h-10 w-10 text-primary" />,
+    title: "Enterprise-Grade Security",
+    description: "Ensure data privacy and compliance with robust security measures built into our AI platforms."
   },
   {
     icon: <RefreshCw className="h-10 w-10 text-primary" />,
-    title: "Continuous Updates",
-    description: "Regular updates with new AI capabilities, improvements, and security patches."
+    title: "Continuous Learning & Improvement",
+    description: "Our AI models continuously learn and adapt, providing increasingly accurate and effective assistance over time."
   }
 ];
 
@@ -83,16 +95,16 @@ const Features = () => {
             transition={{ duration: 0.5 }}
             className="text-3xl md:text-4xl font-bold mb-4"
           >
-            Powerful <span className="gradient-text">AI Features</span>
+            Transformative <span className="gradient-text">AI Capabilities</span>
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-xl text-muted-foreground max-w-2xl mx-auto"
+            className="text-xl text-muted-foreground max-w-3xl mx-auto"
           >
-            Discover the tools and capabilities that make NextGenAINova the leading platform for AI-powered solutions and 3D visualizations.
+            Explore how NextGenAINova's intelligent solutions can revolutionize customer engagement, automate processes, and provide deep insights for your business.
           </motion.p>
         </div>
 
@@ -117,31 +129,6 @@ const Features = () => {
             </motion.div>
           ))}
         </motion.div>
-
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-16 bg-card border border-border rounded-xl p-8 md:p-12 card-hover glow flex flex-col md:flex-row items-center"
-        >
-          <div className="md:w-1/2 mb-6 md:mb-0 md:pr-8">
-            <h3 className="text-2xl md:text-3xl font-bold mb-4">
-              Visualize with <span className="gradient-text">Interactive 3D Models</span>
-            </h3>
-            <p className="text-muted-foreground mb-6">
-              Bring your data to life. Our platform supports seamless integration of 3D models, allowing for immersive visualizations and deeper understanding of complex datasets. Perfect for simulations, product showcases, and advanced analytics.
-            </p>
-            <Button variant="outline">Learn More About 3D</Button>
-          </div>
-          <div className="md:w-1/2 flex justify-center items-center">
-            <div className="w-full max-w-md h-64 bg-muted/50 rounded-lg flex items-center justify-center border border-dashed border-primary/50">
-              <Cube size={64} className="text-primary opacity-30" />
-              <p className="absolute text-sm text-muted-foreground">Interactive 3D Model Placeholder</p>
-            </div>
-          </div>
-        </motion.div>
-
       </div>
     </section>
   );

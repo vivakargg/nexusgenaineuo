@@ -2,14 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { 
-  BrainCircuit, 
-  Code2, 
-  Sparkles, 
-  Bot, 
-  FileCode, 
-  Workflow 
-} from "lucide-react";
+import { Bot, MessageSquare, Users, Zap, FileText, Headphones as Headset } from 'lucide-react';
 
 const AISolutions = () => {
   return (
@@ -24,45 +17,45 @@ const AISolutions = () => {
             className="lg:w-1/2"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Revolutionary <span className="gradient-text">AI Solutions</span> for Modern Development
+              Engage, Support, and Grow with <span className="gradient-text">Intelligent AI</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-8">
-              Our AI-powered tools transform how developers work, making coding more efficient, intuitive, and powerful than ever before.
+              Our AI solutions are designed to enhance customer interactions, streamline support, and uncover new opportunities for your business.
             </p>
             
             <div className="space-y-6">
               <div className="flex items-start">
                 <div className="mr-4 p-2 rounded-lg bg-primary/10">
-                  <BrainCircuit className="h-6 w-6 text-primary" />
+                  <MessageSquare className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold mb-2">Intelligent Code Completion</h3>
+                  <h3 className="text-lg font-semibold mb-2">Multi-Conversational Website Bots</h3>
                   <p className="text-muted-foreground">
-                    Context-aware code suggestions that understand your project structure and coding patterns.
+                    Deploy smart chatbots that engage visitors in meaningful conversations, answer queries, and guide them through your offerings.
                   </p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="mr-4 p-2 rounded-lg bg-primary/10">
-                  <Code2 className="h-6 w-6 text-primary" />
+                  <Headset className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold mb-2">Automated Code Refactoring</h3>
+                  <h3 className="text-lg font-semibold mb-2">Cost-Effective AI Customer Support</h3>
                   <p className="text-muted-foreground">
-                    Identify and fix code smells, improve performance, and enhance readability automatically.
+                    Automate responses to common customer issues, freeing up your human agents for complex cases and significantly reducing support costs.
                   </p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="mr-4 p-2 rounded-lg bg-primary/10">
-                  <Sparkles className="h-6 w-6 text-primary" />
+                  <Zap className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold mb-2">Natural Language to Code</h3>
+                  <h3 className="text-lg font-semibold mb-2">Automated Lead Generation & Qualification</h3>
                   <p className="text-muted-foreground">
-                    Describe what you want to build in plain English, and our AI generates the corresponding code.
+                    Our AI identifies potential leads from interactions, qualifies them based on predefined criteria, and seamlessly integrates with your CRM.
                   </p>
                 </div>
               </div>
@@ -86,88 +79,46 @@ const AISolutions = () => {
                 <div className="p-6 bg-card/80 backdrop-blur-sm border-b border-border">
                   <div className="flex items-center">
                     <Bot className="h-6 w-6 text-primary mr-3" />
-                    <h3 className="text-xl font-semibold">AI Assistant</h3>
+                    <h3 className="text-xl font-semibold">AI-Powered Assistant Example</h3>
                   </div>
                 </div>
                 
                 <div className="p-6 space-y-6">
                   <div className="bg-muted/50 rounded-lg p-4">
-                    <p className="text-sm text-muted-foreground mb-2">User prompt:</p>
-                    <p className="font-medium">Create a REST API endpoint for user authentication with JWT</p>
+                    <p className="text-sm text-muted-foreground mb-2">User (SMB Owner) asks:</p>
+                    <p className="font-medium">"How can I identify my most valuable customer segments based on recent purchase history and engagement?"</p>
                   </div>
                   
                   <div className="space-y-4">
                     <div className="flex items-start">
                       <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center mr-3 mt-1">
-                        <FileCode className="h-4 w-4 text-primary" />
+                        <Users className="h-4 w-4 text-primary" />
                       </div>
                       <div>
-                        <p className="text-sm text-muted-foreground mb-1">Generated solution:</p>
-                        <div className="bg-muted/30 rounded-lg p-4 overflow-x-auto">
-                          <pre className="text-sm">
-                            <code>
-                              <span className="text-blue-400">const</span> <span className="text-yellow-400">express</span> = <span className="text-blue-400">require</span>(<span className="text-orange-400">'express'</span>);
-                              <span className="text-blue-400">const</span> <span className="text-yellow-400">jwt</span> = <span className="text-blue-400">require</span>(<span className="text-orange-400">'jsonwebtoken'</span>);
-                              <span className="text-blue-400">const</span> <span className="text-yellow-400">bcrypt</span> = <span className="text-blue-400">require</span>(<span className="text-orange-400">'bcrypt'</span>);
-                              <span className="text-blue-400">const</span> <span className="text-yellow-400">router</span> = express.<span className="text-yellow-400">Router</span>();
-
-                              <span className="text-green-400">// Login endpoint</span>
-                              router.<span className="text-yellow-400">post</span>(<span className="text-orange-400">'/login'</span>, <span className="text-blue-400">async</span> (req, res) => {"{"}
-                                <span className="text-blue-400">try</span> {"{"}
-                                  <span className="text-blue-400">const</span> {"{"} email, password {"}"} = req.body;
-                                  
-                                  <span className="text-green-400">// Verify user credentials</span>
-                                  <span className="text-blue-400">const</span> <span className="text-yellow-400">user</span> = <span className="text-blue-400">await</span> User.<span className="text-yellow-400">findOne</span>({"{"} email {"}"});
-                                  
-                                  <span className="text-blue-400">if</span> (!user) {"{"}
-                                    <span className="text-blue-400">return</span> res.<span className="text-yellow-400">status</span>(401).<span className="text-yellow-400">json</span>({"{"}
-                                      message: <span className="text-orange-400">'Invalid credentials'</span>
-                                    {"}"});
-                                  {"}"}
-                                  
-                                  <span className="text-blue-400">const</span> <span className="text-yellow-400">isValid</span> = <span className="text-blue-400">await</span> bcrypt.<span className="text-yellow-400">compare</span>(password, user.password);
-                                  
-                                  <span className="text-blue-400">if</span> (!isValid) {"{"}
-                                    <span className="text-blue-400">return</span> res.<span className="text-yellow-400">status</span>(401).<span className="text-yellow-400">json</span>({"{"}
-                                      message: <span className="text-orange-400">'Invalid credentials'</span>
-                                    {"}"});
-                                  {"}"}
-                                  
-                                  <span className="text-green-400">// Generate JWT token</span>
-                                  <span className="text-blue-400">const</span> <span className="text-yellow-400">token</span> = jwt.<span className="text-yellow-400">sign</span>(
-                                    {"{"} userId: user._id {"}"}, 
-                                    process.env.JWT_SECRET,
-                                    {"{"} expiresIn: <span className="text-orange-400">'1h'</span> {"}"}
-                                  );
-                                  
-                                  res.<span className="text-yellow-400">json</span>({"{"} token {"}"});
-                                {"}"} <span className="text-blue-400">catch</span> (error) {"{"}
-                                  res.<span className="text-yellow-400">status</span>(500).<span className="text-yellow-400">json</span>({"{"}
-                                    message: <span className="text-orange-400">'Server error'</span>
-                                  {"}"});
-                                {"}"}
-                              {"}"});
-                              
-                              <span className="text-blue-400">module</span>.<span className="text-yellow-400">exports</span> = router;
-                            </code>
-                          </pre>
+                        <p className="text-sm text-muted-foreground mb-1">AI Response (Customer Segmentation):</p>
+                        <div className="bg-muted/30 rounded-lg p-4">
+                          <p className="text-sm">
+                            "Based on your data, I've identified three key segments:
+                            <br />1. <strong>High-Value Repeat Buyers:</strong> Frequent purchasers with high average order value. (Recommend: Loyalty programs, exclusive offers)
+                            <br />2. <strong>Recently Engaged Prospects:</strong> Showed interest in specific services but haven't purchased. (Recommend: Targeted follow-up campaigns)
+                            <br />3. <strong>Occasional Large Spenders:</strong> Infrequent but high-value transactions. (Recommend: Personalized outreach for big-ticket items)"
+                          </p>
                         </div>
                       </div>
                     </div>
                     
                     <div className="flex items-start">
                       <div className="w-8 h-8 rounded-full bg-secondary/20 flex items-center justify-center mr-3 mt-1">
-                        <Workflow className="h-4 w-4 text-secondary" />
+                        <FileText className="h-4 w-4 text-secondary" />
                       </div>
                       <div>
-                        <p className="text-sm text-muted-foreground mb-1">Implementation steps:</p>
-                        <ol className="list-decimal list-inside space-y-2 text-sm pl-2">
-                          <li>Install required packages: express, jsonwebtoken, bcrypt</li>
-                          <li>Create a User model with email and password fields</li>
-                          <li>Set up environment variable for JWT_SECRET</li>
-                          <li>Implement the login endpoint as shown above</li>
-                          <li>Create middleware to verify JWT tokens for protected routes</li>
-                        </ol>
+                        <p className="text-sm text-muted-foreground mb-1">AI Assistant (Legal Context Example):</p>
+                        <div className="bg-muted/30 rounded-lg p-4">
+                           <p className="text-sm">
+                            "User asks: 'Summarize the key changes in the new data privacy law effective Q3 2025.'
+                            <br />AI provides a concise summary, highlighting critical compliance points and potential impacts, drawing from its continuously updated legal knowledge base."
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
